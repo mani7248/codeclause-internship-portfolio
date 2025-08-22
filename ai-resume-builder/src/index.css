@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* App base layout */
+html, body, #root {
+  height: 100%;
+}
+
+/* Print: hide elements marked as no-print */
+@media print {
+  .no-print { display: none !important; }
+  html, body { background: white !important; }
+}
+
+/* A4 page sizing in preview */
+@media screen {
+  .a4 {
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+}
+
+@media print {
+  .a4 {
+    box-shadow: none !important;
+    width: 210mm;
+    min-height: 297mm;
+  }
+}
